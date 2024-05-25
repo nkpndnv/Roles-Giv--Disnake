@@ -7,12 +7,13 @@ intents = disnake.Intents.default()
 intents.typing = False
 intents.message_content = True
 
-bot = commands.Bot(command_prefix='/', intents=intents)
+bot = commands.InteractionBot(intents=disnake.Intents.all())
 
 
 @bot.event
 async def on_ready():
     print(Fore.GREEN + """
+          
 ███╗░░██╗██╗░░██╗░░░░░░██████╗░░█████╗░██╗░░░░░███████╗░██████╗
 ████╗░██║██║░██╔╝░░░░░░██╔══██╗██╔══██╗██║░░░░░██╔════╝██╔════╝
 ██╔██╗██║█████═╝░█████╗██████╔╝██║░░██║██║░░░░░█████╗░░╚█████╗░
